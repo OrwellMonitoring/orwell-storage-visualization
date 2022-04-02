@@ -1,0 +1,10 @@
+name: Continuous Integration (sv)
+on: push
+jobs:
+        deploy:
+                runs-on: [self-hosted]
+                steps:
+                        - name: Checkout
+                          uses: actions/checkout@v1
+                        - name: Deploy
+                          run: sh prod.sh
